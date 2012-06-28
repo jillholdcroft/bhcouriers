@@ -1,0 +1,16 @@
+<%= render 'shared/header' %>
+<%= render 'shared/nav' %>  
+
+<div class="container">
+  <div class="row">
+    <%= render 'shared/sidenav' %>  
+    <div class="span9"> 
+      <%= render 'form' %> 
+      
+      <%= link_to 'Show', @page %> |
+      <%= link_to 'Back', pages_path %>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

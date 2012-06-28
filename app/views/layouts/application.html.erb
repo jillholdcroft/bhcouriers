@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BH Couriers</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <!-- Empty Tw Bootstrap modal div -->  
+  <div class="modal hide fade" id="modal-window">
+  </div>
+  <%= yield %>
+ </body>
+</html>

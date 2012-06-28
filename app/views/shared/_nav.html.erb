@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="span12"> 
+      <ul class="nav nav-tabs">
+        <li class="<%= 'active' if params[:controller] == 'home' %>"> <a href="/home">Home</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'services' %>"> <a href="/services">Services</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'about_us' %>"> <a href="/about_us">About Us</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'testimonials' %>"> <a href="/testimonials">Testimonials</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'contact_us' %>"> <a href="/contact_us">Contact Us</a> </li>
+        <li class="<%= 'active' if params[:controller] == 'pages' %>"> <a href="/pages">Admin</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
