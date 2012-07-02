@@ -1,5 +1,9 @@
 <div class='row'>
-  <div class='span6'>
+  <div class='span8'>
+  
+    <h2>Edit - Testimonials Page</h2>
+    <br/>
+    
     <fieldset>
     
       <div class="control-group">
@@ -8,49 +12,14 @@
           <%= f.text_field :page_header %>
         </div>
       </div>
-                
-      <div class="control-group">
-        <%= f.label :six_heading_1, "Small heading 1", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :six_heading_1 %>
-        </div>
-      </div>
       
-      <div class="control-group">
-        <%= f.label :paragraph_1, "Paragraph 1", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :paragraph_1 %>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <%= f.label :six_heading_2, "Small heading 2", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :six_heading_2 %>
-        </div>
-      </div>
-      
-      <div class="control-group">
-        <%= f.label :paragraph_2, "Paragraph 2", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :paragraph_2 %>
-        </div>
-      </div>
-      
-            <div class="control-group">
-        <%= f.label :six_heading_3, "Small heading 3", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :six_heading_3 %>
-        </div>
-      </div>
-      
-      <div class="control-group">
-        <%= f.label :paragraph_3, "Paragraph 3", :class=>'control-label'%>
-        <div class="controls">
-          <%= f.text_field :paragraph_3 %>
-        </div>
-      </div>
-      
+      <% @testimonials.each do |testimonial| %>
+        <%= f.fields_for testimonial do |builder| %>
+          <%= render 'testimonial_fields', :f => builder %>
+        <% end %>
+      <% end %>
+            
     </fieldset>
+    
   </div>
 </div>

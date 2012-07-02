@@ -1,10 +1,20 @@
-<p id="notice"><%= notice %></p>
+<%= render 'shared/header' %>
+<%= render 'shared/nav' %>  
 
-<p>
-  <b>Page title:</b>
-  <%= @page.page_title %>
-</p>
+<div class="container">
+  <div class="row">
+    <%= render 'shared/sidenav' %>  
 
+    <div class="hero-unit span8"> 
+      <p>
+        <b>Page title:</b>
+        <%= @page.page_title %>
+      </p>    
+    
+      <%= link_to 'Edit', edit_page_path(@page) %>
+    </div>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

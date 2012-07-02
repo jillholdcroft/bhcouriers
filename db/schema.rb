@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120628203246) do
+ActiveRecord::Schema.define(:version => 20120702133201) do
 
   create_table "pages", :force => true do |t|
     t.string   "page_title"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(:version => 20120628203246) do
     t.text     "paragraph_2"
     t.text     "paragraph_3"
     t.text     "link_1"
-    t.text     "address"
     t.string   "three_heading_1"
     t.string   "three_heading_2"
     t.string   "three_heading_3"
@@ -33,6 +32,23 @@ ActiveRecord::Schema.define(:version => 20120628203246) do
     t.string   "six_heading_4"
     t.string   "email_1"
     t.string   "email_2"
+    t.text     "address_line_1"
+    t.text     "address_line_2"
+    t.text     "address_line_3"
+    t.string   "email_3"
+    t.string   "email_4"
+    t.string   "six_heading_5"
+    t.string   "six_heading_6"
+    t.string   "six_heading_7"
+    t.string   "six_heading_8"
+    t.text     "paragraph_4"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "customer_info"
+    t.text     "customer_testimonial"
   end
 
 end

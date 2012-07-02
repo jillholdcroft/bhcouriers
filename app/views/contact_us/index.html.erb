@@ -8,25 +8,39 @@
 
       <div class="hero-unit">
         <div class="page-header">
-          <h2>Contact Us</h2>
+          <h2><%= @page.page_header %></h2>
         </div>
         
         <div>
-          <h3>Email:</h3>
-          <h6>General enquiries:</h6>
-          <a href="mailto:info@bhcouriers.co.uk">info@bhcouriers.co.uk</a>
-          <h6>Or email a particular member of staff:</h6>
-          <a href="mailto:richard@bhcouriers.co.uk">richard@bhcouriers.co.uk</a>
+          <h3><%= @page.three_heading_1 %></h3>
+          <h6><%= @page.six_heading_1 %></h6>
+          <a href="mailto:<%= @page.email_1 %>"><%= @page.email_1 %></a>
+          <br/><br/>
+          <h6><%= @page.six_heading_2 %></h6>
+          <p><a href="mailto:<%= @page.email_2 %>"><%= @page.email_2 %></a></p>
+          <p><a href="mailto:<%= @page.email_3 %>"><%= @page.email_3 %></a></p>
+          <p><a href="mailto:<%= @page.email_4 %>"><%= @page.email_4 %></a></p>
         </div>
         <br/>
       
         <div>
-          <h3>Telephone:</h3>
-          <h6>General enquiries:</h6>
-          <p>01325 666666</p>
-          <h6>Or call a particular member of staff:</h6>
-          <p>Richard: 07970 813770</p>
+          <h3><%= @page.three_heading_2 %></h3>
+          <h6><%= @page.six_heading_3 %></h6>
+          <p><%= @page.paragraph_1 %></p>
+          <h6><%= @page.six_heading_4 %></h6>
+          <p><%= @page.paragraph_2 %></p>
+          <p><%= @page.paragraph_3 %></p>
+          <p><%= @page.paragraph_4 %></p>
         </div>
+        <br/>
+        
+        <div>
+          <h3><%= @page.three_heading_3 %></h3>
+          <address>
+            <%= @page.address_line_1 %><br>
+            <%= @page.address_line_2 %><br>
+            <%= @page.address_line_3 %><br>
+          </address>
       </div>
       
     </div>

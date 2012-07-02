@@ -8,29 +8,28 @@
       
       <div class="hero-unit">
         <div class="page-header">
-          <h2>About Us</h2>
+          <h2><%= @page.page_header %></h2>
         </div>
         
-        <p>BH Couriers was formed in blah blah</p>      
+        <p><%= @page.paragraph_1 %></p>      
         <%= image_tag("P1030370.JPG", :width=>"200px", :height=>"150px") %>
         <br/>      
         <br/>
-        <p>BH Couriers is ace.</p>
+        <p><%= @page.paragraph_2 %></p>
         <%= image_tag("P1030035.JPG", :width=>"200px", :height=>"150px") %>
         <br/>
         <br/>
       
         <div>
-          <h3>We are located at:</h3>
+          <h3><%= @page.three_heading_1 %></h3>
           <address>
-            1 Westfield Drive<br>
-            Darlington<br>
-            DL3 9BB<br>
+            <%= @page.address_line_1 %><br>
+            <%= @page.address_line_2 %><br>
+            <%= @page.address_line_3 %><br>
           </address>
-          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=DL3+9BB&amp;aq=&amp;sll=53.800651,-4.064941&amp;sspn=6.543459,19.731445&amp;ie=UTF8&amp;hq=&amp;hnear=Darlington+DL3+9BB,+United+Kingdom&amp;ll=54.528815,-1.582321&amp;spn=0.003138,0.009634&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="http://maps.google.co.uk/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=DL3+9BB&amp;aq=&amp;sll=53.800651,-4.064941&amp;sspn=6.543459,19.731445&amp;ie=UTF8&amp;hq=&amp;hnear=Darlington+DL3+9BB,+United+Kingdom&amp;ll=54.528815,-1.582321&amp;spn=0.003138,0.009634&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<%= @page.link_1.html_safe %>"</iframe>
         </div>
       </div>
-      
     </div>
   </div>
 </div>

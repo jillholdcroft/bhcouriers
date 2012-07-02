@@ -8,24 +8,17 @@
       
       <div class="hero-unit">
         <div class="page-header">
-          <h2>Testimonials</h2>
+          <h2><%= @page.page_header %></h2>
         </div>
         
-        <h6>Jill, Darlington:</h6>
-        <p>BH Couriers delivered my sofa and they were brill.  I'd definitely use them again!</p>      
-        <br/>      
-        <br/>
-
-        <h6>Sarah, London:</h6>
-        <p>BH Couriers are very reliable and delivered my parcel on time.</p>   
-        <br/>
-        <br/>
-    
-        <h6>Adam, Edinburgh:</h6>
-        <p>BH Couriers are very polite and reliable.</p>   
-        <br/>
-        <br/>
-
+        <% @testimonials.each do |testimonial| %>
+          <% unless testimonial.customer_info.blank? %>
+            <h6><%= testimonial.customer_info %></h6>
+            <p><%= testimonial.customer_testimonial %></p>      
+            <br/>      
+            <br/>
+          <% end %>
+        <% end %>
 
       </div>
       
