@@ -1,12 +1,11 @@
 <div class='row'>
   <div class="span8">
-  
-    <h2>Edit - About Us Page</h2>
-    <br/>
     <fieldset class='well fields'>
+      <h2><span class="add-on"><i class="icon-pencil"></i></span> Edit - About Us Page</h2>
+      <br/>
     
       <div class="control-group">
-        <%= f.label :page_header, "Page Header", :class=>'control-label'%>
+        <%= f.label :page_header, "Page header", :class=>'control-label'%>
         <div class="controls">
           <%= f.text_field :page_header %>
         </div>
@@ -60,7 +59,8 @@
           <%= f.text_area :link_1 %>
         </div>
       </div>
-                        
+      
+      <%= f.submit 'Save Changes', :class => 'btn btn-large btn-success' %>                  
     </fieldset>
 
   </div>

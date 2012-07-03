@@ -1,24 +1,23 @@
 <div class='row'>
   <div class='span8'>
   
-    <h2>Edit - Testimonials Page</h2>
-    <br/>
-    
-    <fieldset>
+    <fieldset class='well fields'>
+      <h2><span class="add-on"><i class="icon-pencil"></i></span> Edit - Testimonials Page</h2>
+      
+      <br/>
     
       <div class="control-group">
-        <%= f.label :page_header, "Page Header", :class=>'control-label'%>
+        <%= f.label :page_header, "Page header", :class=>'control-label'%>
         <div class="controls">
           <%= f.text_field :page_header %>
         </div>
       </div>
       
-      <% @testimonials.each do |testimonial| %>
-        <%= f.fields_for testimonial do |builder| %>
+        <%= f.fields_for @testimonials do |builder| %>
           <%= render 'testimonial_fields', :f => builder %>
         <% end %>
-      <% end %>
-            
+
+      <%= f.submit 'Save Changes', :class => 'btn btn-large btn-success' %>            
     </fieldset>
     
   </div>

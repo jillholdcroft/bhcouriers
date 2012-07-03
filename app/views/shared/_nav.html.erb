@@ -10,7 +10,8 @@
           <li class="<%= 'active' if params[:controller] == 'testimonials' %>"> <a href="/testimonials">Testimonials</a> </li>
           <li class="<%= 'active' if params[:controller] == 'contact_us' %>"> <a href="/contact_us">Contact Us</a> </li>
           <li class="divider-vertical"></li>
-          <li class="<%= 'active' if params[:controller] == 'pages' %>"> <a href="/pages/<%= Page.find_by_page_type("home").id %>/edit">Admin</a> </li>
+
+          <li class="<%= 'active' if params[:controller] == 'pages' %>"> <a href="/pages/<%= Page.find_by_page_type("home").id %>">Admin<span class="add-on"><i class="icon-paper-clip"></i></span></a> </li>
         </ul>
       </div>
        

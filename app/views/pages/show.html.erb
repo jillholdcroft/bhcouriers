@@ -5,13 +5,164 @@
   <div class="row">
     <%= render 'shared/sidenav' %>  
 
-    <div class="hero-unit span8"> 
-      <p>
-        <b>Page title:</b>
-        <%= @page.page_title %>
-      </p>    
+    <div class="span8 well fields"> 
     
-      <%= link_to 'Edit', edit_page_path(@page) %>
+      <% if @page.page_type == "home" %>
+        <h2><span class="add-on"><i class="icon-file"></i></span> View - Home Page</h2>
+        <br/>
+        <p>
+          <b>Paragraph 1:</b><br/>
+          <%= @page.paragraph_1 %>
+        </p>
+        
+      <% elsif @page.page_type == "services" %>
+        <h2><span class="add-on"><i class="icon-file"></i></span> View - Services Page</h2>
+        <br/>
+        <p>
+          <b>Page header:</b><br/>
+          <%= @page.page_header %>
+        </p>
+        <p>
+          <b>Paragraph 1:</b><br/>
+          <%= @page.paragraph_1 %>
+        </p>
+        
+      <% elsif @page.page_type == "about_us" %>
+        <h2><span class="add-on"><i class="icon-file"></i></span> View - About Us Page</h2>
+        <br/>
+        <p>
+          <b>Page header:</b><br/>
+          <%= @page.page_header %>
+        </p>
+        <p>
+          <b>Paragraph 1:</b><br/>
+          <%= @page.paragraph_1 %>
+        </p>        
+        <p>
+          <b>Paragraph 2:</b><br/>
+          <%= @page.paragraph_2 %>
+        </p>
+        <p>
+          <b>Location heading:</b><br/>
+          <%= @page.three_heading_1 %>
+        </p>
+        <p>
+          <b>Address line 1:</b><br/>
+          <%= @page.address_line_1 %>
+        </p>
+        <p>
+          <b>Address line 2:</b><br/>
+          <%= @page.address_line_2 %>
+        </p>
+        <p>
+          <b>Address line 3:</b><br/>
+          <%= @page.address_line_3 %>
+        </p>
+        <p>
+          <b>Map Link:</b><br/>
+          <%= @page.link_1 %>
+        </p>
+
+      <% elsif @page.page_type == "testimonials" %>
+        <h2><span class="add-on"><i class="icon-file"></i></span> View - Testimonials Page</h2>
+        <br/>
+        <p>
+          <b>Page header:</b><br/>
+          <%= @page.page_header %>
+        </p>
+        <!--<p>
+          <b>Customer information:</b><br/>
+          <%= @page.customer_info %>
+        </p>
+        <p>
+          <b>Testimonial:</b><br/>
+          <%= @page.customer_testimonial %>
+        </p>-->
+        
+      <% elsif @page.page_type == "contact_us" %>
+        <h2><span class="add-on"><i class="icon-file"></i></span> View - Contact Us Page</h2>
+        <br/>
+        <p>
+          <b>Page header:</b><br/>
+          <%= @page.page_header %>
+        </p>
+        <p>
+          <b>Main heading 1:</b><br/>
+          <%= @page.three_heading_1 %>
+        </p>
+        <p>
+          <b>Email heading 1:</b><br/>
+          <%= @page.six_heading_1 %>
+        </p>
+        <p>
+          <b>Email 1:</b><br/>
+          <%= @page.email_1 %>
+        </p>
+        <p>
+          <b>Email heading 2:</b><br/>
+          <%= @page.six_heading_2 %>
+        </p>
+        <p>
+          <b>Email 2:</b><br/>
+          <%= @page.email_2 %>
+        </p>
+        <p>
+          <b>Email 3:</b><br/>
+          <%= @page.email_3 %>
+        </p>
+         <p>
+          <b>Email 4:</b><br/>
+          <%= @page.email_4 %>
+        </p>             
+        <p>
+          <b>Main heading 2:</b><br/>
+          <%= @page.three_heading_2 %>
+        </p>
+        <p>
+          <b>Telephone heading 1:</b><br/>
+          <%= @page.six_heading_3 %>
+        </p>
+        <p>
+          <b>Telephone 1:</b><br/>
+          <%= @page.paragraph_1 %>
+        </p>
+        <p>
+          <b>Telephone heading 2:</b><br/>
+          <%= @page.six_heading_4 %>
+        </p>
+        <p>
+          <b>Telephone 2:</b><br/>
+          <%= @page.paragraph_2 %>
+        </p>
+        <p>
+          <b>Telephone 3:</b><br/>
+          <%= @page.paragraph_3 %>
+        </p>
+        <p>
+          <b>Telephone 4:</b><br/>
+          <%= @page.paragraph_4 %>
+        </p>    
+        
+        <p>
+          <b>Main heading 3:</b><br/>
+          <%= @page.three_heading_3 %>
+        </p>   
+        <p>
+          <b>Address line 1:</b><br/>
+          <%= @page.address_line_1 %>
+        </p>
+        <p>
+          <b>Address line 2:</b><br/>
+          <%= @page.address_line_2 %>
+        </p>
+        <p>
+          <b>Address line 3:</b><br/>
+          <%= @page.address_line_3 %>
+        </p>
+        
+      <% end %> 
+    
+      <%= link_to 'Edit', edit_page_path(@page), :class => 'btn btn-primary btn-large' %>
     </div>
 
   </div>

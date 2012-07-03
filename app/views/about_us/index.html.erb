@@ -19,9 +19,10 @@
         <%= image_tag("P1030035.JPG", :width=>"200px", :height=>"150px") %>
         <br/>
         <br/>
+        <br/>
       
         <div>
-          <h3><%= @page.three_heading_1 %></h3>
+          <h3><span class="add-on"><i class="icon-map-marker"></i></span> <%= @page.three_heading_1 %></h3>
           <address>
             <%= @page.address_line_1 %><br>
             <%= @page.address_line_2 %><br>
@@ -33,6 +34,5 @@
     </div>
   </div>
 </div>
-
 
 <%= render 'shared/footer' %>  

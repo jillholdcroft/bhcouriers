@@ -22,7 +22,8 @@ class PagesController < ApplicationController
   # PUT /pages/1.json
   def update
     @page = Page.find(params[:id])
-
+    @testimonials = Testimonial.all
+    
     respond_to do |format|
       if @page.update_attributes(params[:page])
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
